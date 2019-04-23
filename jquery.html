@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Basic Functions</title>
+	<link rel="stylesheet" type="text/css" href="jQuery.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+    	$(document).ready(function(){
+
+    		$('#addclass button').click(function(){
+    			$('#addclass p').css('background-color','red');
+    		});
+
+    		$('#hide button').click(function(){
+    			$('#hide p').hide();
+    		});
+
+
+    		$('#show button').click(function(){
+    			$('#hide p').show();
+    		});
+
+    		$('#toggle button').click(function(){
+    			$('#toggle p').toggle();
+    		});
+
+    		$('#slidedown button').click(function(){
+    			$('#slideup p').slideDown(1000);
+    		});
+
+    		$('#slideup button').click(function(){
+    			$('#slideup p').slideUp(100);
+    		});
+
+    		$('#slidetoggle button').click(function(){
+    			$('#slidetoggle p').slideToggle( "slow");
+    		});
+
+    		$('#fadein button').click(function(){
+    			$('#fadeout p').fadeIn( "slow");
+    		});
+
+    		$('#fadeout button').click(function(){
+    			$('#fadeout p').fadeOut( "slow");
+    		});
+
+    		$('#class button').click(function(){
+    			$('#class p').addClass("red");
+    		});
+
+    		$('#before button').click(function(){
+    			$('#before p').before("<h3>Whatever</h3>");
+    		});
+
+    		$('#after button').click(function(){
+    			$('#after p').after("Whatever");
+    		});
+
+    		$('#append button').click(function(){
+    			$('#append p').append("Whatever");
+    		});
+
+    		$('#html button').click(function(){
+    			$('#html p').html("<h3>Whatever</h3>");
+    		});
+
+    		$('#attribute button').click(function(){
+    			$('#attribute input').attr("checked", "checked");
+    		});
+
+    		$('#val button').click(function(){
+    			$('#val input').val("New Words");
+    		});
+
+    		$('#text button').click(function(){
+    			console.log("Working")
+    			$('#text p').text("<h3>Whatever</h3>");
+    		});	
+    });
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="card" id="addclass" style="width: 30rem;">
+			<div class="card-body">
+			
+		
+		
+				<h1>Add Class</h1>
+				<p>Click the button to add class 'red' to this paragraph</p>
+				<button>AddClass</button>
+			</div>
+		</div>
+
+		<div class="card" id="hide"style="width: 30rem;">
+			<div class="card-body">
+			
+		
+		
+				<h1>Hide</h1>
+				<p>Click the button to hide this paragraph</p>
+				<button>Hide</button>
+			</div>
+		</div>
+
+	<div class="card" id="show" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>Show</h1>
+			<p>Click the button to show the previous hidden paragraph</p>
+			<button>AddClass</button>
+		</div>
+	</div>
+
+	<div class="card" id="toggle" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>Toggle</h1>
+			<p>Click the button to toggle the appearance of the paragraph</p>
+			<button>AddClass</button>
+		</div>
+	</div>
+
+	<div class="card" id="slidedown" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>Slide Down</h1>
+			<p>Click the button to add add slide down animation to this paragraph</p>
+			<button>AddClass</button>
+		</div>
+	</div>
+
+	<div class="card" id="slideup" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>Slide Up</h1>
+			<p>Click the button to add class 'red' to this paragraph</p>
+			<button id="addclass">AddClass</button>
+		</div>
+	</div>
+
+	<div class="card" id="slidetoggle" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>Slide Toggle</h1>
+			<p>Click the button to add slide toggle animation to this paragraph</p>
+			<button>AddClass</button>
+		</div>
+	</div>
+
+	<div class="card" id="fadein" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>Fade In</h1>
+			<p>Click the button to add fade in animation to this paragraph</p>
+			<button>AddClass</button>
+		</div>
+	</div>
+
+	<div class="card" id="fadeout" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>Fade Out</h1>
+			<p>Click the button to add fade out animation to this paragraph</p>
+			<button>AddClass</button>
+		</div>
+	</div>
+
+	<div class="card" id="class" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>Add Class</h1>
+			<p>Click the button to add class 'red' to this paragraph</p>
+			<button>AddClass</button>
+		</div>
+	</div>
+
+	<div class="card" id="before" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>Before</h1>
+			<p>Click the button to add class 'red' to this paragraph</p>
+			<button>AddClass</button>
+		</div>
+	</div>
+
+	<div class="card" id="after" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>After</h1>
+			<p>Click the button to add a header after this paragraph</p>
+			<button>AddClass</button>
+		</div>
+	</div>
+
+	<div class="card" id="append" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>Append</h1>
+			<p>Click the button to add class 'red' to this paragraph</p>
+			<button>AddClass</button>
+		</div>
+	</div>
+
+	<div class="card" id="html" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>HTML</h1>
+			<p>Click the button to add class 'red' to this paragraph</p>
+			<button id="addclass">AddClass</button>
+		</div>
+	</div>
+
+	<div class="card" id="attribute" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>Attribute</h1>
+
+			<p>Get the value of an attribute for the first element in the set of matched elements.</p>
+			<label for="checkbox"></label>
+			<input type="checkbox">
+			<button>AddClass</button>
+		</div>
+	</div>
+
+	<div class="card" id="val" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>Val</h1>
+			<p>Get the current value of the first element in the set of matched elements or set the value of every matched element.</p>
+		
+				<input type="textarea" value="">
+			
+			<button id="addclass">AddClass</button>
+		</div>
+	</div>
+
+	<div class="card" id="text" style="width: 30rem;">
+		<div class="card-body">
+			
+		
+		
+			<h1>Text</h1>
+			<p>Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.</p>
+			<button>AddClass</button>
+		</div>
+	</div>
+
+
+</body>
+</html>
